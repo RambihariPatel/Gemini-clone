@@ -44,7 +44,27 @@ const Main = () => {
             </div>
 
          </div>
-      </div>
+         <div className='main-bottom'>
+            <div className="search-box">
+            <input type="text" placeholder='Enter a promp here' />
+            
+            <div className='search-box'>
+
+                <img src={assets.gallery_icon} alt='' />
+                <img src={assets.mic_icon} alt='' />
+                <img src={assets.send_icon} alt='' />
+                
+            </div>
+
+            <p className='buttom-info'>
+                Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps
+            </p>
+            
+          </div>
+         </div>
+
+        </div>
+
     </div>
   )
 }
