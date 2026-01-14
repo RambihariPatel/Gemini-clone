@@ -1,4 +1,3 @@
-
 .main{
     flex: 1;
     min-height: 100vh;
@@ -6,6 +5,7 @@
     position: relative;
 }
 
+/* NAV */
 .main .nav {
     display: flex;
     align-items: center;
@@ -19,12 +19,15 @@
     width: 40px;
     border-radius: 50%;
 }
+
+/* CONTAINER */
 .main-container {
     max-width: 900px;
     margin: auto;
 }
 
-.main .greet{
+/* GREETING (same size as before) */
+.grid{
     margin: 50px 0px;
     font-size: 56px;
     color: #c4c7c5;
@@ -32,20 +35,18 @@
     padding: 20px;
 }
 
-.main .greet span {
-    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
-    
+.grid span{
+    background: linear-gradient(16deg, #4b90ff, #ff5546);
     -webkit-background-clip: text;
-
     -webkit-text-fill-color: transparent;
 }
 
+/* CARDS */
 .main .cards{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 15px;
     padding: 20px;
-
 }
 
 .main .card {
@@ -55,8 +56,8 @@
     border-radius: 8px;
     position: relative;
     cursor: pointer;
-
 }
+
 .main .card img{
     width: 35px;
     padding: 5px;
@@ -70,20 +71,23 @@
 .main .card p {
     color: #585858;
     font-size: 17px;
-    
 }
+
 .main .card:hover {
     background-color: #dfe4ea;
 }
-.main-bottom {
-    position: relative;
-    bottom: 0;
-    width: 100;
+
+/* BOTTOM INPUT (SAFE VERSION) */
+.main-bottom{
+    margin-top: 40px;
     max-width: 900px;
-    padding: 0px, 20px;
-    margin: auto;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.search-box {
+
+/* SEARCH BOX */
+.search-box{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -93,11 +97,6 @@
     border-radius: 50px;
 }
 
-.search-box img{
-    width: 24px;
-    cursor: pointer;
-
-}
 .search-box input{
     flex: 1;
     background: transparent;
@@ -106,12 +105,21 @@
     padding: 8px;
     font-size: 18px;
 }
-.search-box div{
+
+.search-box img{
+    width: 24px;
+    cursor: pointer;
+}
+
+/* ICON GROUP */
+.search-box > div{
     display: flex;
     align-items: center;
     gap: 15px;
 }
-.main .buttom-info  {
+
+/* INFO TEXT */
+.main .buttom-info{
     font-size: 13px;
     margin: 15px auto;
     text-align: center;

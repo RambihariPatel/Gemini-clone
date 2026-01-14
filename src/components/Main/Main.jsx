@@ -56,11 +56,13 @@ const Main = () => {
                 
             </div>
 
+            
+            
+          </div>
             <p className='buttom-info'>
                 Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps
             </p>
-            
-          </div>
+
          </div>
 
         </div>
