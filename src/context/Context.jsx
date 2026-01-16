@@ -1,22 +1,47 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import runChat from "../components/config/gemini";
 
-export const Context = createContext();
+export const Context = createContext("");
 
-const ContextProvider = (props) => {
+const ContextProvider = ({ children }) => {
 
-    const onsent = async (prompt) => {
-        await runChat(prompt)
-    }
-    onsent("What is react")  
-    const contextValue = {
- 
+  const [input, setInput] = useState("");
+  const [recentPrompt, setRecentPrompt] = useState("");
+  const [prevPrompts, setPrevPrompts] = useState([]);
+  const [showResult, setShowResult] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [resultData, setResultData] = useState("");
 
-    }
+  const onSent = async (prompt) => {
+    setLoading(true);
+    setShowResult(true);
+    setRecentPrompt(prompt);
 
-    return(
-        <Context.Provider>
-            {props.children}
-        </Context.Provider>
-    )
-}
+    const response = await runChat(prompt);
+    setResultData(response);
+
+    setLoading(false);
+    setInput("");
+  };
+
+  const value = {
+    input,
+    setInput,
+    recentPrompt,
+    setRecentPrompt,
+    prevPrompts,
+    setPrevPrompts,
+    showResult,
+    loading,
+    resultData,
+    onSent,
+  };
+
+  return (
+    <Context.Provider value={value}>
+      {children}
+    </Context.Provider>
+  );
+};
+
+export default ContextProvider;
