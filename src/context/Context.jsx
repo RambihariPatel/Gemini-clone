@@ -17,11 +17,12 @@ const ContextProvider = ({ children }) => {
     setShowResult(true);
     setRecentPrompt(prompt);
 
-    const response = await runChat(prompt);
+    const response = await runChat(input);
     setResultData(response);
 
     setLoading(false);
     setInput("");
+    setInput("")
   };
 
   const value = {
