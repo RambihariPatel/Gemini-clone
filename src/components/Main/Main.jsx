@@ -24,12 +24,15 @@ const Main = () => {
 
       <div className="main-container">
 
-        <div className="grid">
-          <p><span>Hello, Ram.</span></p>
-          <p>How can I help you today?</p>
-        </div>
+        {
+          !showResult 
+          ? <>
+            <div className="grid">
+                <p><span>Hello, Ram.</span></p>
+                <p>How can I help you today?</p>
+            </div>
 
-        <div className="cards">
+            <div className="cards">
           <div className="card">
             <p>Suggest beautiful places to see on an upcoming road trip</p>
             <img src={assets.compass_icon} alt='' />
@@ -51,6 +54,31 @@ const Main = () => {
           </div>
         </div>
 
+        
+        
+        </>
+         :  <div className='result'>
+               <div className="result-title">
+               
+                 <img src = {assets.user_icon} alt = "" />
+                  <p>{recentPrompt}</p>
+               </div>  
+
+               <div className = "result-data">
+                <img src = {assets.gemini_icon} alt = "" />
+                {loading ? <div className = "loader">
+                  <hr />
+                  <hr/>
+                  <hr/>
+
+                </div> : <p dangerouslySetInnerHTML = {{__html: resultData}}></p>}
+                
+               </div>
+                
+            </div>
+        }
+
+  
         <div className='main-bottom'>
           <div className="search-box">
             <input

@@ -13,17 +13,23 @@ const ContextProvider = ({ children }) => {
   const [resultData, setResultData] = useState("");
 
   const onSent = async (prompt) => {
-    setLoading(true);
-    setShowResult(true);
-    setRecentPrompt(prompt);
+      const finalPrompt = prompt || input;
 
-    const response = await runChat(input);
-    setResultData(response);
+      setLoading(true);
+      setShowResult(true);
+      setRecentPrompt(finalPrompt);
 
-    setLoading(false);
-    setInput("");
-    setInput("")
-  };
+      try {
+        const response = await runChat(finalPrompt);
+        setResultData(response);
+      } catch (error) {
+        console.error("Error while fetching response:", error);
+        setResultData("Something went wrong. Please try again.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
 
   const value = {
     input,
