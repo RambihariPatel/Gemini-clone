@@ -1,16 +1,51 @@
-# React + Vite
+# 🤖 Gemini Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern AI chatbot web application inspired by Google Gemini.  
+This project replicates the core functionality of an AI assistant using the Gemini API with a clean and responsive UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Overview
 
-## React Compiler
+Gemini Clone is a React-based web application that allows users to interact with an AI chatbot in real-time.  
+It mimics the behavior of Google's Gemini AI by providing conversational responses using API integration.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project is ideal for:
+- Learning API integration
+- Building chat-based applications
+- Practicing modern frontend development
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+### 🔹 Core Features
+- 💬 Real-time AI Chat Interface  
+- ⚡ Fast and responsive UI  
+- 🤖 Gemini API integration  
+- ⌨️ Typing animation effect  
+
+### 🔹 Additional Features
+- 🎨 Clean and modern design  
+- 📱 Fully responsive layout  
+- 🧩 Component-based architecture (React)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js, JavaScript  
+- **Styling:** CSS / Tailwind (if used)  
+- **Build Tool:** Vite  
+- **API:** Google Gemini API  
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow these steps to run the project locally:
+
+### 1️⃣ Clone the repository
+
+git clone https://github.com/RambihariPatel/Gemini-clone.git
+cd Gemini-clone
