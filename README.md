@@ -39,7 +39,7 @@ This project is ideal for:
 - **Build Tool:** Vite  
 - **API:** Google Gemini API  
 
----
+
 
 ## ⚙️ Installation & Setup
 
