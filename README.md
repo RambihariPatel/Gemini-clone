@@ -13,7 +13,7 @@ It mimics the behavior of Google's Gemini AI by providing conversational respons
 This project is ideal for:
 - Learning API integration
 - Building chat-based applications
-- Practicing modern frontend development
+- Practicing modern frontend development.
 
 ---
 
